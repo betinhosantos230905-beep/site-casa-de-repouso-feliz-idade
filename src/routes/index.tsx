@@ -17,10 +17,10 @@ import {
 } from "lucide-react";
 
 import hero from "@/assets/hero.jpg";
-import atividadeJardim from "@/assets/atividade-jardim.jpg.asset.json";
-import convivenciaDanca from "@/assets/convivencia-danca.jpg.asset.json";
-import aniversario from "@/assets/aniversario-dez-anos.jpg.asset.json";
-import enfeiteNatal from "@/assets/enfeite-natal.jpg.asset.json";
+import atividadeJardim from "@/assets/atividade-jardim.jpg";
+import convivenciaDanca from "@/assets/convivencia-danca.jpg";
+import aniversario from "@/assets/aniversario-dez-anos.jpg";
+import enfeiteNatal from "@/assets/enfeite-natal.jpg";
 
 // Dados reais — atualizados em 01/11/2026
 const WHATSAPP =
@@ -96,22 +96,22 @@ const servicos = [
 
 const galeria = [
   {
-    src: aniversario.url,
+    src: aniversario,
     alt: "Residente e familiar comemorando com bolo e flores",
     caption: "Datas especiais",
   },
   {
-    src: convivenciaDanca.url,
+    src: convivenciaDanca,
     alt: "Residente dançando com familiar em salão decorado",
     caption: "Música e dança",
   },
   {
-    src: atividadeJardim.url,
+    src: atividadeJardim,
     alt: "Residente em atividade recreativa no jardim com cuidadora",
     caption: "Lazer ao ar livre",
   },
   {
-    src: enfeiteNatal.url,
+    src: enfeiteNatal,
     alt: "Enfeite decorado com a foto de uma residente",
     caption: "Cada história em destaque",
   },
@@ -259,7 +259,7 @@ function Index() {
       <section className="bg-secondary/60">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:grid-cols-2">
           <img
-            src={atividadeJardim.url}
+            src={atividadeJardim}
             alt="Residente em atividade recreativa no jardim com cuidadora"
             loading="lazy"
             width={827}
