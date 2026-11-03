@@ -122,14 +122,14 @@ function Index() {
     <div className="min-h-screen">
       <header className="absolute inset-x-0 top-0 z-10">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5">
-          <div className="leading-tight text-primary-foreground">
-            <span className="block font-serif text-xl font-semibold">
-              Feliz Idade
-            </span>
-            <span className="block text-[0.65rem] uppercase tracking-[0.2em] opacity-80">
-              Casa de Repouso
-            </span>
-          </div>
+          <div className="leading-tight text-primary-foreground drop-shadow-lg">
+  <span className="block font-sans text-sm font-bold uppercase tracking-[0.18em]">
+    Casa de Repouso
+  </span>
+  <span className="mt-1 block font-serif text-3xl font-bold tracking-wide text-white md:text-4xl">
+    Feliz Idade
+  </span>
+</div>
 
           <div className="flex items-center gap-2">
             <a
@@ -176,9 +176,9 @@ function Index() {
         <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-foreground/65 to-transparent" />
 
         <div className="relative mx-auto w-full max-w-6xl px-5 pb-16">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">
-            Casa de repouso em Mendes/RJ
-          </p>
+          <p className="mb-5 inline-block rounded-lg bg-[#f4ead8]/90 px-4 py-2 text-sm font-bold uppercase tracking-wider text-[#315b43] shadow-md md:text-base">
+  Casa de repouso em Mendes/RJ
+</p>
 
           <h1 className="max-w-2xl text-4xl font-semibold leading-tight text-primary-foreground md:text-6xl">
             Um lar cheio de carinho para quem você ama

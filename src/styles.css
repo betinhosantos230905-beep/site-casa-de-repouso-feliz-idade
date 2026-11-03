@@ -1,28 +1,22 @@
+
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-/*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
- */
+/* =========================================
+   FELIZ IDADE — IDENTIDADE VISUAL
+   Verde natural + Linho + Terracota
+========================================= */
 
 @theme inline {
   --font-serif: "Lora", Georgia, serif;
   --font-sans: "Nunito Sans", system-ui, sans-serif;
+
   --color-whatsapp: var(--whatsapp);
   --color-instagram: var(--instagram);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -30,6 +24,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -50,11 +45,13 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
+
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -66,87 +63,280 @@
 }
 
 :root {
-  --radius: 1rem;
-  --background: oklch(0.98 0.01 90);
-  --foreground: oklch(0.26 0.035 155);
-  --card: oklch(0.995 0.005 90);
-  --card-foreground: oklch(0.26 0.035 155);
-  --popover: oklch(0.995 0.005 90);
-  --popover-foreground: oklch(0.26 0.035 155);
-  --primary: oklch(0.4 0.085 158);
-  --primary-foreground: oklch(0.98 0.012 90);
-  --secondary: oklch(0.93 0.035 152);
-  --secondary-foreground: oklch(0.28 0.05 158);
-  --muted: oklch(0.94 0.015 100);
-  --muted-foreground: oklch(0.47 0.03 155);
-  --accent: oklch(0.78 0.115 85);
-  --accent-foreground: oklch(0.3 0.06 85);
-  --whatsapp: oklch(0.68 0.17 150);
-  --instagram: oklch(0.6 0.2 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.9 0.02 130);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.55 0.08 155);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  color-scheme: light;
+
+  --radius: 1.15rem;
+
+  /* Base */
+  --background: oklch(0.975 0.018 88);
+  --foreground: oklch(0.29 0.035 150);
+
+  /* Superfícies */
+  --card: oklch(0.995 0.006 88);
+  --card-foreground: oklch(0.29 0.035 150);
+  --popover: oklch(0.995 0.006 88);
+  --popover-foreground: oklch(0.29 0.035 150);
+
+  /* Verde principal */
+  --primary: oklch(0.43 0.075 151);
+  --primary-foreground: oklch(0.985 0.012 88);
+
+  /* Verde suave */
+  --secondary: oklch(0.93 0.035 145);
+  --secondary-foreground: oklch(0.34 0.055 150);
+
+  /* Textos secundários */
+  --muted: oklch(0.95 0.018 90);
+  --muted-foreground: oklch(0.49 0.025 145);
+
+  /* Terracota */
+  --accent: oklch(0.68 0.12 43);
+  --accent-foreground: oklch(0.99 0.008 85);
+
+  /* Redes e contato */
+  --whatsapp: oklch(0.64 0.16 150);
+  --instagram: oklch(0.58 0.19 8);
+
+  /* Estados */
+  --destructive: oklch(0.58 0.2 28);
+  --destructive-foreground: oklch(0.99 0.005 85);
+
+  /* Bordas e campos */
+  --border: oklch(0.89 0.025 125);
+  --input: oklch(0.91 0.02 110);
+  --ring: oklch(0.55 0.075 150);
+
+  /* Gráficos */
+  --chart-1: oklch(0.52 0.1 150);
+  --chart-2: oklch(0.68 0.12 43);
+  --chart-3: oklch(0.72 0.08 105);
+  --chart-4: oklch(0.58 0.1 180);
+  --chart-5: oklch(0.75 0.09 75);
+
+  /* Sidebar */
+  --sidebar: oklch(0.975 0.018 88);
+  --sidebar-foreground: oklch(0.29 0.035 150);
+  --sidebar-primary: oklch(0.43 0.075 151);
+  --sidebar-primary-foreground: oklch(0.985 0.012 88);
+  --sidebar-accent: oklch(0.93 0.035 145);
+  --sidebar-accent-foreground: oklch(0.34 0.055 150);
+  --sidebar-border: oklch(0.89 0.025 125);
+  --sidebar-ring: oklch(0.55 0.075 150);
 }
 
+/* =========================================
+   MODO ESCURO — compatibilidade
+========================================= */
+
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  color-scheme: dark;
+
+  --background: oklch(0.21 0.025 150);
+  --foreground: oklch(0.95 0.015 90);
+
+  --card: oklch(0.25 0.025 150);
+  --card-foreground: oklch(0.95 0.015 90);
+  --popover: oklch(0.25 0.025 150);
+  --popover-foreground: oklch(0.95 0.015 90);
+
+  --primary: oklch(0.72 0.08 145);
+  --primary-foreground: oklch(0.22 0.03 150);
+
+  --secondary: oklch(0.31 0.035 150);
+  --secondary-foreground: oklch(0.92 0.02 100);
+
+  --muted: oklch(0.3 0.025 150);
+  --muted-foreground: oklch(0.76 0.025 100);
+
+  --accent: oklch(0.7 0.12 43);
+  --accent-foreground: oklch(0.99 0.008 85);
+
+  --destructive: oklch(0.65 0.19 25);
+  --destructive-foreground: oklch(0.98 0.01 85);
+
+  --border: oklch(0.38 0.025 150);
+  --input: oklch(0.38 0.025 150);
+  --ring: oklch(0.68 0.08 145);
+
+  --chart-1: oklch(0.72 0.08 145);
+  --chart-2: oklch(0.7 0.12 43);
+  --chart-3: oklch(0.76 0.08 105);
+  --chart-4: oklch(0.68 0.1 180);
+  --chart-5: oklch(0.78 0.09 75);
+
+  --sidebar: oklch(0.23 0.025 150);
+  --sidebar-foreground: oklch(0.95 0.015 90);
+  --sidebar-primary: oklch(0.72 0.08 145);
+  --sidebar-primary-foreground: oklch(0.22 0.03 150);
+  --sidebar-accent: oklch(0.31 0.035 150);
+  --sidebar-accent-foreground: oklch(0.92 0.02 100);
+  --sidebar-border: oklch(0.38 0.025 150);
+  --sidebar-ring: oklch(0.68 0.08 145);
 }
+
+/* =========================================
+   BASE GLOBAL
+========================================= */
 
 @layer base {
   * {
     border-color: var(--color-border);
   }
 
-  h1, h2, h3 { font-family: var(--font-serif); }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    font-family: var(--font-sans);
+    min-width: 320px;
+    margin: 0;
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--color-foreground);
+    font-family: var(--font-serif);
+    letter-spacing: -0.035em;
+    line-height: 1.18;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+
+  h2,
+  h3 {
+    font-weight: 600;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button,
+  a {
+    touch-action: manipulation;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid var(--color-ring);
+    outline-offset: 4px;
+  }
+
+  ::selection {
+    background: oklch(0.83 0.07 145);
+    color: oklch(0.24 0.035 150);
+  }
+}
+
+/* =========================================
+   ACABAMENTO GLOBAL
+========================================= */
+
+body {
+  overflow-x: hidden;
+}
+
+::placeholder {
+  color: var(--color-muted-foreground);
+  opacity: 0.75;
+}
+
+a,
+button {
+  transition:
+    color 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease,
+    opacity 220ms ease;
+}
+
+img {
+  height: auto;
+}
+
+/* Rolagem mais discreta */
+
+html {
+  scrollbar-color: oklch(0.68 0.055 145) oklch(0.95 0.015 90);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--color-background);
+  border-radius: 999px;
+  background: oklch(0.68 0.055 145);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* =========================================
+   ACESSIBILIDADE E MOVIMENTO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  h1 {
+    letter-spacing: -0.04em;
+  }
+
+  h2 {
+    letter-spacing: -0.03em;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
   }
 }
